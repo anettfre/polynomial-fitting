@@ -1,0 +1,14 @@
+I have four plots who shows the least square polynomial fitting:
+One plot of method one and two with data set 1 and m = 3, and one with m = 8
+One plot of method one and two with data set 2 and m = 3, and one with m = 8
+The two methods should give the same polynomial.
+I have used python so solve the problems.
+I work with matrix A in the first method, from task 1, using the QR factorization.
+For task 2 I work with the matrix B that come from A.T * A, using the Cholesky factorization.
+One way of looking at differences is to look at the Condition number of A and B.
+To find the Condition number I used numpy.linalg.cond() in the program. Condition number of A is: 508.86 and
+Condition number of B is: 258944.02
+The Condition number for B is much higher than A, this means that the Cholesky is worse than QR, since it is
+ill-conditioned.
+Another difference is that the Cholesky factorization take more time, likely because it goes through forward and
+back substitution. 
